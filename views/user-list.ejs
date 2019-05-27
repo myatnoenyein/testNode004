@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+     <table>
+        <thead>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+        </thead>
+        <tbody>
+          <% for(var i=0;i<users.length;i++){%>
+            <tr>
+              <td><a href="/userdetail/<%=users[i]._id%>"><%=users[i].name%></a></td>
+              <td><%=users[i].email%></td>
+              <td><%=users[i].password%></td>
+            </tr>
+            <%}%>
+        </tbody>
+      </table>
+  </body>
+</html>
